@@ -1,6 +1,6 @@
 # React Project Seed
 
-Demo d'une App avec  **React + Flux + Webpack**
+Demo d'une App avec  **React + Flux + Webpack + API GMAP/RANDOME**
 
 ![enter image description here](http://no-kill-switch.ghost.io/content/images/2015/06/react.png)
 ![enter image description here](http://facebook.github.io/react/img/blog/flux-diagram.png)
