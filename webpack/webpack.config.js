@@ -38,6 +38,10 @@ var config = {
         filename: jsBundle,
         pathinfo: false
     },
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+    },
     module: {
         loaders: loaders
     },

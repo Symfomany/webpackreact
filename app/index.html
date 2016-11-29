@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title><%= title %></title>
-  <% if (debug === false) { %>
-  <link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css" />
-  <% } %>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        <%= title %>
+    </title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Use minimum-scale=1 to enable GPU rasterization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1" <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+
+    <% if (debug === false) { %>
+        <link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css" />
+        <% } %>
 </head>
+
 <body>
-  <div id="app"></div>
-  <script src="js/app.<%= version %>.js"></script>
+    <div class="container">
+        <div id="app"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+
+    <script src="js/app.<%= version %>.js"></script>
 </body>
+
 </html>

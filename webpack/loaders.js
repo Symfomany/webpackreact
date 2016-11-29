@@ -1,5 +1,5 @@
 var path = require('path');
-var pkg = require('../package.json');
+var pkg = require('../package.json'); //load variables in package
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var DEBUG = process.env.NODE_ENV === 'development';

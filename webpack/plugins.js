@@ -10,6 +10,7 @@ var cssBundle = path.join('css', util.format('[name].%s.css', pkg.version));
 
 var plugins = [
     new webpack.optimize.OccurenceOrderPlugin()
+
 ];
 if (DEBUG) {
     plugins.push(

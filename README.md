@@ -3,10 +3,24 @@
 Demo d'une App avec  **React + Flux + Webpack**
 
 ![enter image description here](http://no-kill-switch.ghost.io/content/images/2015/06/react.png)
+![enter image description here](http://facebook.github.io/react/img/blog/flux-diagram.png)
 
 ![enter image description here](https://camo.githubusercontent.com/ebc085019011ababb0d35024824304831c7dc72a/68747470733a2f2f7765627061636b2e6769746875622e696f2f6173736574732f6c6f676f2e706e67)
 
 ![enter image description here](http://seanamarasinghe.com/wp-content/uploads/2016/04/eslint-1050x360.jpg)
+
+
+## Good Links
+
+[React Component](https://facebook.github.io/react/docs/react-component.html)
+
+[React Component & Props](https://facebook.github.io/react/docs/components-and-props.html)
+
+[Events handling](https://facebook.github.io/react/docs/handling-events.html)
+
+[Load external datas](http://mediatemple.net/blog/tips/loading-and-using-external-data-in-react/)
+[Webpack with Material](https://github.com/callemall/material-ui-webpack-example/tree/25938ac6f5db94645e6ea9f24a903792d3133c5d)
+
 
 ## All NPM scripts
 
