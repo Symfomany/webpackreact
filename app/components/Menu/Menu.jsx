@@ -1,9 +1,10 @@
-import styles from './_Menu.scss';
+
+// import styles from './_Menu.scss';
 import React from 'react';
 import MenuItem from './MenuItem';
 
 
-let { Component } = React;
+let { Component, PropTypes  } = React;
 
 
 export default class Menu extends Component {
@@ -12,6 +13,9 @@ export default class Menu extends Component {
         items: []
     };
 
+    static propTypes = {
+        items: PropTypes.array.isRequired
+    };
 
     render() {
         return (

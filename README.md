@@ -1,4 +1,4 @@
-# React Project Seed
+# React-Flux Project Seed
 
 Demo d'une App avec  **React + Flux + Webpack + API GMAP/RANDOME**
 

@@ -4,6 +4,7 @@ import Menu from '../Menu/Menu';
 
 let { PropTypes } = React;
 
+
 export default class Body extends React.Component {
 
   static defaultProps = {

@@ -1,8 +1,14 @@
+
+
 import React from 'react';
 
 let { Component, PropTypes } = React;
 
 export default class MenuItem extends Component {
+
+  static propTypes = {
+    item: PropTypes.object.isRequired
+  };
 
   render() {
     return (

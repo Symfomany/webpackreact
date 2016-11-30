@@ -6,14 +6,20 @@ var pkg = require('../package.json');
 var loaders = require('./loaders');
 var plugins = require('./plugins');
 
+// Load dev en
 var DEBUG = process.env.NODE_ENV === 'development';
 
 var jsBundle = path.join('js', util.format('[name].%s.js', pkg.version));
 
+
+/**
+ * Point of entry
+ */
 var entry = {
     app: ['./app.jsx']
 };
 
+// Debug on port dev with host
 if (DEBUG) {
     entry.app.push(
         util.format(
@@ -25,12 +31,15 @@ if (DEBUG) {
     entry.app.push('webpack/hot/dev-server');
 }
 
+/**
+ * All Configuration of Webpack
+ */
 var config = {
     context: path.join(__dirname, '../app'),
     cache: DEBUG,
     debug: DEBUG,
     target: 'web',
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     entry: entry,
     output: {
         path: path.resolve(pkg.config.buildDir),
@@ -52,6 +61,7 @@ var config = {
     resolve: {
         extensions: ['', '.js', '.json', '.jsx']
     },
+    // Load dev configuration with HOT, stats, verbose infos...
     devServer: {
         contentBase: path.resolve(pkg.config.buildDir),
         hot: true,

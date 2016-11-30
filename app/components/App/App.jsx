@@ -1,3 +1,4 @@
+
 import styles from './_App.scss';
 
 import React from 'react';
@@ -7,34 +8,34 @@ import Body from '../Body/Body';
 import Footer from '../Footer/Footer';
 
 function getAppState() {
-  return {
-    items: ItemsStore.getAll()
-  };
+    return {
+        items: ItemsStore.getAll()
+    };
 }
 
 export default class App extends React.Component {
 
-  state = getAppState()
+    state = getAppState()
 
-  componentDidMount() {
-    ItemsStore.addChangeListener(this.onChange);
-    AppActions.getItems();
-  }
+    componentDidMount() {
+        ItemsStore.addChangeListener(this.onChange);
+        AppActions.getItems();
+    }
 
-  componentWillUnmount() {
-    ItemsStore.removeChangeListener(this.onChange);
-  }
+    componentWillUnmount() {
+        ItemsStore.removeChangeListener(this.onChange);
+    }
 
-  onChange = () => {
-    this.setState(getAppState());
-  }
+    onChange = () => {
+        this.setState(getAppState());
+    }
 
-  render() {
-    return (
-      <div className={styles.app}>
-        <Body items={this.state.items} />
-        <Footer />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className={styles.app}>
+                <Body items={this.state.items} />
+                <Footer />
+            </div>
+        );
+    }
 }
