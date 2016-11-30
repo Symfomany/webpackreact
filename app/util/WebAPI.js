@@ -1,11 +1,12 @@
+import $ from 'jquery';
+
 export default {
     getItems() {
         return new Promise((resolve) => {
             console.log("liii");
-            axios.get("https://randomuser.me/api/?results=10&nat=fr")
+            $.getJSON("https://randomuser.me/api/?results=10&nat=fr")
                 .then(function(result) {
-                    console.log(result.data.results);
-                    return resolve(result.data.results);
+                    return resolve(result.results);
                 });
 
             // setTimeout(() => {
