@@ -2,6 +2,7 @@ var path = require('path');
 var pkg = require('../package.json'); //load variables in package
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 var DEBUG = process.env.NODE_ENV === 'development';
 
 var jsxLoader;
@@ -26,6 +27,7 @@ var sassParams = [
     'includePaths[]=' + path.resolve(__dirname, '../node_modules')
 ];
 
+//if env debug
 if (DEBUG) {
     jsxLoader = [];
     jsxLoader.push('react-hot');
@@ -56,6 +58,9 @@ if (DEBUG) {
     ].join('!'));
 }
 
+//add jquery
+jqueryLoader = 'imports?jQuery=jquery,$=jquery,this=>window';
+
 var loaders = [{
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -84,8 +89,11 @@ var loaders = [{
     },
     {
         test: /vendor\/.+\.(jsx|js)$/,
-        loader: 'imports?jQuery=jquery,$=jquery,this=>window'
-    }
+        loader: jqueryLoader
+    },
+    { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
+
+    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file" }
 ];
 
 module.exports = loaders;

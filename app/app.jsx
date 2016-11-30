@@ -8,6 +8,9 @@ import React from 'react';
 // import { render } from 'react-dom';
 import App from './components/App/App';
 
+
+// Materialize.toast('Bienvenue chez React + Flux', 4000) // 4000 is the duration of the toast
+
 /**
  * Load default App in Root
  */

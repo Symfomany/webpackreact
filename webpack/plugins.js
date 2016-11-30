@@ -18,4 +18,10 @@ if (DEBUG) {
     );
 }
 
+if (!DEBUG) {
+    plugins.push(
+        new webpack.optimize.UglifyJsPlugin({ minimize: true })
+    );
+}
+
 module.exports = plugins;
