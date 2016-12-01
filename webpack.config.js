@@ -1,25 +1,25 @@
-var util = require('util');
+let util = require('util');
 
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
+let webpack = require('webpack');
+let WebpackDevServer = require('webpack-dev-server');
 
-var opn = require('opn'); // open in browser
-var pkg = require('./package.json'); // load package.json for constants
+let opn = require('opn'); // open in browser
+let pkg = require('./package.json'); // load package.json for constants
 
-// access variables from package.json
-var port = pkg.config.devPort;
-var host = pkg.config.devHost;
+// access letiables from package.json
+let port = pkg.config.devPort;
+let host = pkg.config.devHost;
 
 // Get Environement pf NODE (development or production)
-var configPath = process.argv[2] || './webpack/webpack.config';
-var config = require(configPath);
+let configPath = process.argv[2] || './webpack/webpack.config';
+let config = require(configPath);
 
 
 /**
  * webpack-dev-server
  * Load Server Webpacl=k with configuration Webpack loaded
  */
-var server = new WebpackDevServer(
+let server = new WebpackDevServer(
     webpack(config),
     config.devServer
 );
@@ -29,7 +29,7 @@ var server = new WebpackDevServer(
  */
 server.listen(port, host, function(err) {
     if (err) { console.log(err); }
-    var url = util.format('http://%s:%d', host, port);
+    let url = util.format('http://%s:%d', host, port);
     console.log('Listening at %s', url);
     opn(url);
 });
