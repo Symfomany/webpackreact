@@ -4,7 +4,7 @@ import React from 'react';
 import MenuItem from './MenuItem';
 
 
-let { Component, PropTypes  } = React;
+let { Component, PropTypes } = React;
 
 
 export default class Menu extends Component {

@@ -7,7 +7,7 @@ let { Component } = React;
 const search = 'Email, Nom, Prénom...';
 
 function formatage(str) {
-    return str.toLowserCase();
+    return str.toLowerCase();
 }
 
 export default class NavBar extends Component {
